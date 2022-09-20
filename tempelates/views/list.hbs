@@ -1,0 +1,35 @@
+{{>header}}
+<body>
+  {{>nav}}
+
+
+    <div class="mainDiv">
+      <div class="innerMainDiv">
+        <h2>List</h2>
+        <table class="table table-striped">
+          <thead>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Mobile</th>
+            <th>City</th>
+            <th>-</th>
+            <th>-</th>
+          </thead>
+          <tbody>
+        {{!-- Loop throug list items --}}
+          {{#each list}}
+            <tr>
+              <td>{{this.name}}</td>
+              <td>{{this.email}}</td>
+              <td>{{this.mobile}}</td>
+              <td>{{this.city}}</td>
+              <td><button class="btn btn-small btn-primary btn-edit"><a href="/addUpdate/{{this._id}}">Edit</a></button></td>
+              <td><button class="btn btn-small btn-primary btn-delete"><a href="/delete/{{this._id}}">Delete</a></button></td>
+            </tr>
+          {{/each}}
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+  {{>footer}}

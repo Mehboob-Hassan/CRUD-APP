@@ -1,0 +1,32 @@
+{{>header}}
+
+<body>
+  {{>nav}}
+
+  <body>
+    <div class="mainDiv">
+      <div class="innerMainDiv">
+        <h2>Add or Update</h2>
+        <form action="/addUpdate" method="POST">
+          <div class="row">
+            <div class="col-6">
+              <input name="id" class="form-control" type="hidden" placeholder="Full Name" value="{{teacher._id}}">
+            </div>
+            <div class="col-6">
+              <input name="id" class="form-control" type="hidden" placeholder="Full Name" value="{{teacher._id}}">
+            </div>
+            <div class="col-6">
+              <input name="name" class="form-control" type="text" placeholder="Full Name" value="{{teacher.name}}">
+              <input name="email" class="form-control" type="email" placeholder="Email" value="{{teacher.email}}">
+            </div>
+            <div class="col-6">
+              <input name="mobile" class="form-control" type="text" placeholder="Mobile" value="{{teacher.mobile}}">
+              <input name="city" class="form-control" type="text" placeholder="City" value="{{teacher.city}}">
+            </div>
+          </div><br>
+          <button type="submit" href="/addUpdate/{{this._id}}" class="btn btn-primary submitBtn" value="addUpdate">Submit</button>
+        </form>
+      </div>
+    </div>
+
+    {{>footer}}

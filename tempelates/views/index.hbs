@@ -1,0 +1,28 @@
+{{>header}}
+
+<body>
+  {{>nav}}
+
+
+{{!-- Insert new record page --}}
+  <body>
+    <div class="mainDiv">
+      <div class="innerMainDiv">
+        <h2>Login</h2>
+        <form action="/" method="POST">
+          <div class="row">
+            <div class="col-6">
+              <input name="name" class="form-control" type="text" placeholder="Full Name">
+              <input name="email" class="form-control" type="email" placeholder="Email">
+            </div>
+            <div class="col-6">
+              <input name="mobile" class="form-control" type="text" placeholder="Mobile">
+              <input name="city" class="form-control" type="text" placeholder="City">
+            </div>
+          </div><br>
+          <button type="submit" class="btn btn-primary submitBtn" value="List">Submit</button>
+        </form>
+      </div>
+    </div>
+
+    {{>footer}}
